@@ -1,1 +1,6 @@
 Home : <%= @message %>
+
+<% @employments.each do |employment| %>
+  <h1> <%= employment.field %> </h1>
+  <h2> <%= employment.employment_company.name %> </h2>
+<% end %>

@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @message = "static page"
+    @message = "Dynamic page"
+
+    @employments = Employment.all
   end
 end

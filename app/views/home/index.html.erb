@@ -3,4 +3,13 @@ Home : <%= @message %>
 <% @employments.each do |employment| %>
   <h1> <%= employment.field %> </h1>
   <h2> <%= employment.employment_company.name %> </h2>
+
+  <br>
+
+  <p>
+    <%= link_to "Write Resume", write_resume_path(employment_id: employment.id), method: :post %>
+
+    Resume count:
+    <%= employment.resume_count %>
+  </p>
 <% end %>
